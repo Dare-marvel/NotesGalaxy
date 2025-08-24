@@ -34,19 +34,19 @@ Say goodbye to messy folders and say hello to structured learning!
 ---
 Features
 
-📚 Engineering Notes - All subjects, all branches, all years
-📄 Previous Papers - With solutions and answer keys
-🎮 Learning Games - Study through interactive gameplay
-🎥 Video Hub - Curated educational playlists
-✍️ Student Blogs - Share experiences and tips
-💼 LinkedIn Formatter - Create professional posts
+- 📚 Engineering Notes - All subjects, all branches, all years
+- 📄 Previous Papers - With solutions and answer keys
+- 🎮 Learning Games - Study through interactive gameplay
+- 🎥 Video Hub - Curated educational playlists
+- ✍️ Student Blogs - Share experiences and tips
+- 💼 LinkedIn Formatter - Create professional posts
 
 ---
 Why NotesGalaxy?
-✅ 100% Free Forever
-✅ Mobile-Friendly Design
-✅ Community-Driven Content
-✅ Regular Updates
+- ✅ 100% Free Forever
+- ✅ Mobile-Friendly Design
+- ✅ Community-Driven Content
+- ✅ Regular Updates
 ---
 
 <div align="center">

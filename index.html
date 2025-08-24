@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesGalaxy - Engineering Notes Hub</title>
+    <!-- Load Quantico font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quantico', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background: rgba(13, 17, 33, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4a3de0;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid #6c5ce7;
+            box-shadow: 0 0 20px rgba(108, 92, 231, 0.7);
+            background: #fff;
+            padding: 5px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe, #fd79a8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #a29bfe;
+            margin: 25px 0 15px;
+            border-bottom: 2px solid #6c5ce7;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            color: #fd79a8;
+            margin: 20px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+            border: none;
+            cursor: pointer;
+            font-family: 'Quantico', sans-serif;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.6);
+        }
+        
+        .typing-animation {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: 1.8rem;
+            text-align: center;
+            color: #a29bfe;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #6c5ce7, transparent);
+            margin: 30px 0;
+            border: none;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(41, 47, 83, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #4a3de0;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #6c5ce7;
+        }
+        
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(41, 47, 83, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #4a3de0;
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            color: #6c5ce7;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #6c5ce7;
+        }
+        
+        .stars {
+            color: #fbc531;
+            font-size: 1.5rem;
+            margin: 15px 0;
+            letter-spacing: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .typing-animation {
+                font-size: 1.4rem;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="/favicon.webp" alt="NotesGalaxy Logo">
+                <h1>NotesGalaxy</h1>
+            </div>
+            
+            <h3>Welcome to your one-stop destination for all engineering notes! 🚀</h3>
+            
+            <p>
+                <a href="https://notes-galaxy.vercel.app" class="btn">
+                    <i class="fas fa-rocket"></i> Visit Live Site
+                </a>
+            </p>
+            
+            <div class="typing-animation">
+                <span id="typing-text">Simplify your engineering journey!</span>
+            </div>
+        </header>
+        
+        <hr class="divider">
+        
+        <section>
+            <h2>🎯 About</h2>
+            <p>✨ <strong>NotesGalaxy</strong> is your ultimate destination for organized, easy-to-navigate engineering notes.<br>Say goodbye to messy folders and say hello to structured learning!</p>
+            <blockquote>
+                <p>🧠 Made for students, by students.<br>💡 Learn smarter, not harder.</p>
+            </blockquote>
+        </section>
+        
+        <hr class="divider">
+        
+        <section>
+            <h2>🌐 Live Demo</h2>
+            <p>🔗 <a href="https://notes-galaxy.vercel.app" class="btn"><i class="fas fa-external-link-alt"></i> Launch App →</a></p>
+        </section>
+        
+        <hr class="divider">
+        
+        <section>
+            <h2>⭐ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Engineering Notes</h3>
+                    <p>All subjects, all branches, all years</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Previous Papers</h3>
+                    <p>With solutions and answer keys</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Learning Games</h3>
+                    <p>Study through interactive gameplay</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Hub</h3>
+                    <p>Curated educational playlists</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Student Blogs</h3>
+                    <p>Share experiences and tips</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn Formatter</h3>
+                    <p>Create professional posts</p>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="divider">
+        
+        <section>
+            <h2>💫 Why NotesGalaxy?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>100% Free Forever</h3>
+                    <p>No hidden costs, no premium plans</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-Friendly Design</h3>
+                    <p>Access from any device, anywhere</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community-Driven Content</h3>
+                    <p>By students, for students</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Regular Updates</h3>
+                    <p>New content added frequently</p>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="divider">
+        
+        <footer>
+            <p>Made with ❤️ for engineering students worldwide</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>⭐ Star this repository if you find it helpful! ⭐</p>
+        </footer>
+    </div>
+
+    <script>
+        // Typing animation effect
+        const texts = [
+            "Simplify your engineering journey!",
+            "All notes in one galaxy!",
+            "Organized and easy to access!",
+            "Let's learn together!"
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingDelay = 100;
+        let deletingDelay = 50;
+        let pauseDelay = 2000;
+        
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            const typingElement = document.getElementById('typing-text');
+            
+            if (isDeleting) {
+                // Remove characters
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingDelay = deletingDelay;
+            } else {
+                // Add characters
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingDelay = 100;
+            }
+            
+            // Check if current text is complete
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingDelay = pauseDelay;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingDelay = 500;
+            }
+            
+            setTimeout(typeEffect, typingDelay);
+        }
+        
+        // Start the typing effect when page loads
+        document.addEventListener('DOMContentLoaded', typeEffect);
+    </script>
+</body>
+</html>

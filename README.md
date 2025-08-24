@@ -32,14 +32,21 @@ Say goodbye to messy folders and say hello to structured learning!
 🔗 **[Launch App →](https://notes-galaxy.vercel.app)**
 
 ---
-## 🚀 Features
-- 📁 Subject-wise categorized notes  
-- 📥 Instant download support  
-- 🧠 Neatly formatted explanations  
-- 🔍 Search and filter capability  
-- 🔄 Continuous updates
-- 🌐 Community Support 
+Features
 
+📚 Engineering Notes - All subjects, all branches, all years
+📄 Previous Papers - With solutions and answer keys
+🎮 Learning Games - Study through interactive gameplay
+🎥 Video Hub - Curated educational playlists
+✍️ Student Blogs - Share experiences and tips
+💼 LinkedIn Formatter - Create professional posts
+
+---
+Why NotesGalaxy?
+✅ 100% Free Forever
+✅ Mobile-Friendly Design
+✅ Community-Driven Content
+✅ Regular Updates
 ---
 
 <div align="center">

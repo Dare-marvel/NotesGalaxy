@@ -42,7 +42,6 @@ Say goodbye to messy folders and say hello to structured learning!
 
 ---
 
----
 <div align="center">
   <p>Made with ❤️ for engineering students worldwide</p>
   <p>⭐ Star this repository if you find it helpful! ⭐</p>
